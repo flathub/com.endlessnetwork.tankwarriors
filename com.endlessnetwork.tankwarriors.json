@@ -19,12 +19,12 @@
         	{
                     "type": "git",
                     "url": "https://github.com/endless-network/TankWarriors_Binary.git",
-                    "commit":"361d0c23f1b0d3492deb161150eb4865f7145240"
+                    "commit":"be5f05a675f6e47ffca8ca4e77e33c5d5f148ebc"
                 },
                 {
                     "type": "file",
-                    "url": "https://github.com/endless-network/TankWarriors_Binary/releases/download/v1.0/TankWarriors.zip",
-                    "sha256":"a67b65f3e7d8abe550c90fee64e8c8d5ac3004c86a0268008476731c752e9938"
+                    "url": "https://github.com/endless-network/TankWarriors_Binary/releases/download/v1.1/TankWarriors.zip",
+                    "sha256":"b399171c006edd98111e8f5e0699700c88d3ca1bbc162ceb4ddc12e8b36b7262"
                 }, 
                 {
                   "commands" : 
