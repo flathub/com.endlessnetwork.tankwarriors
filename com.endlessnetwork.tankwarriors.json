@@ -19,17 +19,17 @@
         	{
                     "type": "git",
                     "url": "https://github.com/endless-network/TankWarriors_Binary.git",
-                    "commit":"be5f05a675f6e47ffca8ca4e77e33c5d5f148ebc"
+                    "commit":"945d1812adee6e84147185a9b705b4a6e012644d"
                 },
                 {
                     "type": "file",
-                    "url": "https://github.com/endless-network/TankWarriors_Binary/releases/download/v1.1/TankWarriors.zip",
-                    "sha256":"b399171c006edd98111e8f5e0699700c88d3ca1bbc162ceb4ddc12e8b36b7262"
+                    "url": "https://github.com/endless-network/TankWarriors_Binary/releases/download/v1.3/TW_Lin_40.zip",
+                    "sha256":"069376000b9c6d803237d139f58583a0e50dc066441d68712cf1e4952f33ad2b"
                 }, 
                 {
                   "commands" : 
                   [
-                  "exec /app/bin/TankWarrior.x86_64"
+                  "exec /app/bin/TankWarrior_Lin_40.x86_64"
                   ],
                   "dest-filename" : "com.endlessnetwork.tankwarriors.sh",
                   "type" : "script"
@@ -42,9 +42,9 @@
 	      "install -Dm644 TW_Favicon_256x256.png /app/share/icons/hicolor/256x256/apps/com.endlessnetwork.tankwarriors.png",
 	      "install -Dm644 TW_Favicon_64x64.png /app/share/icons/hicolor/64x64/apps/com.endlessnetwork.tankwarriors.png",
         "install -D com.endlessnetwork.tankwarriors.sh /app/bin/com.endlessnetwork.tankwarriors.sh",
-        "unzip TankWarriors.zip",
-        "mv TankWarrior_Data /app/bin/",
-        "install TankWarrior.x86_64 /app/bin/TankWarrior.x86_64"
+        "unzip TW_Lin_40.zip",
+        "mv TW_Lin_40/TankWarrior_Lin_40_Data /app/bin/",
+        "install TW_Lin_40/TankWarrior_Lin_40.x86_64 /app/bin/TankWarrior_Lin_40.x86_64"
         
       ]
     }  
