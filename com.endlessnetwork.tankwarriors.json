@@ -1,7 +1,7 @@
 {
   "app-id" : "com.endlessnetwork.tankwarriors",
   "runtime" : "org.freedesktop.Platform",
-  "runtime-version" : "18.08",
+  "runtime-version" : "19.08",
   "sdk" : "org.freedesktop.Sdk",
   "build-options" : {
     "strip" : true,
@@ -19,7 +19,7 @@
         	{
                     "type": "git",
                     "url": "https://github.com/endless-network/TankWarriors_Binary.git",
-                    "commit":"945d1812adee6e84147185a9b705b4a6e012644d"
+                    "commit":"0f97fce0db39c9db5021c57cb4b97953c90ec055"
                 },
                 {
                     "type": "file",
