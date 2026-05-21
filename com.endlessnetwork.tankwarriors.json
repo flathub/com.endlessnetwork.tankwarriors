@@ -1,19 +1,35 @@
 {
     "app-id": "com.endlessnetwork.tankwarriors",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "24.08",
+    "runtime-version": "25.08",
     "sdk": "org.freedesktop.Sdk",
     "build-options": {
         "strip": true,
         "no-debuginfo": true
     },
     "command": "com.endlessnetwork.tankwarriors.sh",
+    "tags": ["proprietary"],
+    "separate-locales": false,
+    "finish-args": [
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=pulseaudio",
+        "--device=dri"
+    ],
     "modules": [
         {
             "name": "tankwarriors",
             "buildsystem": "simple",
-            "only-arches": [
-                "x86_64"
+            "build-commands": [
+                "install -Dm644 com.endlessnetwork.tankwarriors.desktop -t /app/share/applications/",
+                "install -Dm644 com.endlessnetwork.tankwarriors.appdata.xml -t /app/share/metainfo/",
+                "install -Dm644 TW_Favicon_128x128.png /app/share/icons/hicolor/128x128/apps/com.endlessnetwork.tankwarriors.png",
+                "install -Dm644 TW_Favicon_256x256.png /app/share/icons/hicolor/256x256/apps/com.endlessnetwork.tankwarriors.png",
+                "install -Dm644 TW_Favicon_64x64.png /app/share/icons/hicolor/64x64/apps/com.endlessnetwork.tankwarriors.png",
+                "install -D com.endlessnetwork.tankwarriors.sh -t /app/bin/",
+                "unzip TW_Lin_40.zip",
+                "mv TW_Lin_40/TankWarrior_Lin_40_Data /app/bin/",
+                "install TW_Lin_40/TankWarrior_Lin_40.x86_64 /app/bin/TankWarrior_Lin_40.x86_64"
             ],
             "sources": [
                 {
@@ -33,25 +49,7 @@
                     "dest-filename": "com.endlessnetwork.tankwarriors.sh",
                     "type": "script"
                 }
-            ],
-            "build-commands": [
-                "install -Dm644 com.endlessnetwork.tankwarriors.desktop /app/share/applications/com.endlessnetwork.tankwarriors.desktop",
-                "install -Dm644 com.endlessnetwork.tankwarriors.appdata.xml /app/share/appdata/com.endlessnetwork.tankwarriors.appdata.xml",
-                "install -Dm644 TW_Favicon_128x128.png /app/share/icons/hicolor/128x128/apps/com.endlessnetwork.tankwarriors.png",
-                "install -Dm644 TW_Favicon_256x256.png /app/share/icons/hicolor/256x256/apps/com.endlessnetwork.tankwarriors.png",
-                "install -Dm644 TW_Favicon_64x64.png /app/share/icons/hicolor/64x64/apps/com.endlessnetwork.tankwarriors.png",
-                "install -D com.endlessnetwork.tankwarriors.sh /app/bin/com.endlessnetwork.tankwarriors.sh",
-                "unzip TW_Lin_40.zip",
-                "mv TW_Lin_40/TankWarrior_Lin_40_Data /app/bin/",
-                "install TW_Lin_40/TankWarrior_Lin_40.x86_64 /app/bin/TankWarrior_Lin_40.x86_64"
             ]
         }
-    ],
-    "separate-locales": false,
-    "finish-args": [
-        "--share=ipc",
-        "--socket=x11",
-        "--socket=pulseaudio",
-        "--device=dri"
     ]
 }
